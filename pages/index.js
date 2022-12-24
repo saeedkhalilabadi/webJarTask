@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 import Header from '../components/header'
 import Categories from '../components/categories';
 import { dehydrate, QueryClient, useQuery } from "react-query";
+import PostCard from '../components/postCard'
 import * as api from './api/api';
 
 
@@ -32,27 +33,20 @@ export default function Home() {
   return (
     <div className='bg-white'>
       <Header data={fillters} onChange={(e) => console.log(e)} />
+      <div class="flex flex-row">
+        <div class="basis-1/4">
 
-      <Categories data={fillters} onChange={setFillters} />
 
-      {data?.map(post => <div>
-
-        <img
-          src={post?.introImageUrl?.host + post?.introImageUrl?.path}
-          layout="fill"
-          objectFit="contain"
-          alt={''}
-        />
-        <div>
-          {post.title}
+          <Categories data={fillters} onChange={setFillters} />
         </div>
-        <section>
-          {`${post.body}`}
+        <div class="basis-3/4">
 
-        </section>
+
+          {data?.map(post => <PostCard post={post} />
+          )}
+        </div>
+
       </div>
-      )}
-
     </div>
   )
 }
