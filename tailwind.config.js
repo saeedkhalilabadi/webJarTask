@@ -5,7 +5,29 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+
+   
+    extend: {
+      colors: {
+        'Normal': '#00C853',
+        'presed': '#00c85380',
+        'disable': '#817F7F',
+        'loading': '#00c853bf',
+        'focus': '#00712F',
+        'ligthBtnPresed': '#f2f2f280',
+
+      },
+      boxShadow: {
+        'normal': '0px 0px 10px rgba(0, 0, 0, 0.05)',
+        'active': '0px 0px 10px rgba(0, 0, 0, 0.1)',
+        'focus': 'box-shadow: 0px 0px 10px rgba(0, 148, 255, 0.1)',
+        'presedBtnLigth': "inset 0px 4px 4px rgba(0, 0, 0, 0.25)",
+        'hoverBtnLigth': '0px 5px 10px rgba(0, 200, 83, 0.25)',
+
+      }
+
+
+    },
     borderRadius: {
       'none': '0',
       'sm': '0.125rem',

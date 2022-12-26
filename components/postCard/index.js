@@ -2,22 +2,24 @@
 import Author from "./author"
 import CreateAt from "./createAt"
 import CommenCount from "./commentCount"
+import { ButtonOrginal } from "../button"
+import LoadingIcon from "../loadingIcon"
 export default function PostCard({ post }) {
 
     return (
-        <div class='flex  rounded-xl mt-24'>
-            <div class="basis-1/4 ml-16">
+        <div class='md:flex rounded-xl mt-24 xs:mx-16'>
+            <div class="w-full md:w-72 md:h-72 md:ml-16 ">
 
 
                 <img
-                    class="min-w-72 min-h-72 w-72 h-72 rounded-r-xl"
+                    class="w-full  md:min-w-72 md:min-h-72 md:w-72 md:h-72 rounded-t-xl  md:rounded-r-xl md:rounded-tl-none "
                     src={post?.introImageUrl?.host + post?.introImageUrl?.path}
                     layout="fill"
                     objectFit="contain"
                     alt={''}
                 />
             </div>
-            <div class='basis-1/2 ml-16'>
+            <div class='w-full md:basis-3/6 md:ml-16 '>
 
                 <div class="justify-self-start font-medium text-lg mt-9">
                     {post.title}
@@ -33,8 +35,12 @@ export default function PostCard({ post }) {
 
                 </div>
             </div>
-            <div class="basis-1/4 flex flex-wrap-reverse justify-center ">
-                <button>بیشتر</button>
+            <div class="w-full mt-16 md:basis-1/6 flex flex-wrap-reverse justify-center md:w-44  ">
+                <ButtonOrginal>
+                    <div class="flex justify-center">
+                        بیشتر
+                    </div>
+                </ButtonOrginal>
             </div>
         </div>
     )
