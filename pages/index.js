@@ -9,6 +9,7 @@ import Categories from '../components/categories';
 import { dehydrate, QueryClient, useQuery } from "react-query";
 import PostCard from '../components/postCard';
 import SearchBox from '../components/searchBox';
+import BreadCrumb from '../components/breadCrumb';
 import * as api from './api/api';
 
 
@@ -35,6 +36,7 @@ export default function Home() {
   return (
     <div className='bg-white'>
       <Header data={fillters} onChange={(e) => console.log(e)} />
+      <BreadCrumb params={['خانه', 'وبلاگ']} />
       <div class=" flex justify-center font-extrabold text-3xl  mt-20">
         وبلاگ
       </div>
