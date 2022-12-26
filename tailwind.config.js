@@ -6,8 +6,15 @@ module.exports = {
   ],
   theme: {
 
-   
+
     extend: {
+      margin: {
+        '3/12': '20%',
+      },
+
+      minWidth: {
+        '350': '350px',
+      },
       colors: {
         'Normal': '#00C853',
         'presed': '#00c85380',
@@ -15,6 +22,9 @@ module.exports = {
         'loading': '#00c853bf',
         'focus': '#00712F',
         'ligthBtnPresed': '#f2f2f280',
+        'inputBorderNormal': '#00000033',
+        'backloginModal': '#0000004d',
+        'modalLogin': '#FAFAFA',
 
       },
       boxShadow: {

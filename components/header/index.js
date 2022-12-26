@@ -2,6 +2,7 @@
 import { ButtonLight, ButtonOrginal } from '../button/index.js';
 import { AiOutlineMenu } from 'react-icons/ai';
 import MenuItem from './menuItem.js';
+import Login from '../login/index.js';
 
 export default function Header({ data = [], onChange = () => { } }) {
     const menuItems = [{ title: 'خانه', link: "" }, { title: 'محصولات', link: "" }, { title: 'خدمات', link: "وبلاگ" }, { title: '', link: "" }]
@@ -20,9 +21,8 @@ export default function Header({ data = [], onChange = () => { } }) {
         </div>
 
         <div class="absolute left-2 md:left-24 xl:left-52 w-40 ">
-            <ButtonLight>
-                ورود
-            </ButtonLight></div>
+            <Login />
+        </div>
 
 
 
